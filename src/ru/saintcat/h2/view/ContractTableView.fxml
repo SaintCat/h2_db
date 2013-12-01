@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import jfxtras.labs.scene.control.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.saintcat.h2.ContractTableViewController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane dividerPositions="0.5157593123209169" focusTraversable="true" prefHeight="285.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TableView id="personTable" fx:id="contractTable" prefHeight="298.0" prefWidth="273.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="47.0" text="id" fx:id="idColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="47.0" text="Client" fx:id="idClientColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="47.0" text="Worker" fx:id="idWorkerColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="128.0" text="Sum" fx:id="sumColumn" />
+                <TableColumn prefWidth="75.0" text="Date" fx:id="dateColumn" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+          <children>
+            <GridPane prefHeight="155.0" prefWidth="330.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="120.0">
+              <children>
+                <Label text="Id" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Client" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Worker" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Total" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="idField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="clientField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="workerField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="totalField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="dateField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="230.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <HBox id="HBox" alignment="CENTER_RIGHT" prefWidth="250.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <children>
+                <Button mnemonicParsing="false" onAction="#handleDeleteContract" prefWidth="80.0" text="Delete" />
+              </children>
+            </HBox>
+            <TextField fx:id="seachField" layoutX="104.0" layoutY="30.0" onKeyReleased="#handleSeach" prefWidth="104.0" promptText="seach..." />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

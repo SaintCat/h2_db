@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import jfxtras.labs.scene.control.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.saintcat.h2.ClientTableViewController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane dividerPositions="0.5157142857142857" focusTraversable="true" prefHeight="285.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TableView id="personTable" fx:id="clientTable" prefHeight="298.0" prefWidth="273.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="43.0" text="id" fx:id="idColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="83.0" text="Name" fx:id="nameColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Telephone" fx:id="telephoneColumn" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+          <children>
+            <GridPane prefHeight="67.0" prefWidth="330.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="120.0">
+              <children>
+                <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Telephone" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="nameField" prefWidth="200.0" promptText="Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="telephoneField" prefWidth="200.0" promptText="Telephone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="150.0" minWidth="50.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="230.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <HBox id="HBox" alignment="CENTER" prefWidth="250.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <children>
+                <Button id="" mnemonicParsing="false" onAction="#handleNewClient" prefWidth="80.0" text="New..." />
+                <Button mnemonicParsing="false" onAction="#handleEditClient" prefWidth="80.0" text="Save..." />
+                <Button mnemonicParsing="false" onAction="#handleDeleteClient" prefWidth="80.0" text="Delete" />
+              </children>
+            </HBox>
+            <TextField fx:id="seachField" layoutX="143.0" layoutY="30.0" onKeyReleased="#handleSeach" prefWidth="104.0" promptText="seach..." />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@DarkTheme.css" />
+  </stylesheets>
+</AnchorPane>

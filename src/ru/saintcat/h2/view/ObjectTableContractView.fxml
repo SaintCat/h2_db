@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="224.0" prefWidth="321.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.saintcat.h2.ObjectTableContractViewController">
+  <children>
+    <GridPane prefHeight="148.0" prefWidth="301.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+        <Label id="nameField" alignment="CENTER_LEFT" contentDisplay="RIGHT" prefWidth="75.0" text="Worker" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label id="siteField" alignment="CENTER_LEFT" prefWidth="75.0" text="Objects" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField id="lastNameField" fx:id="objectsField" disable="false" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label alignment="CENTER_LEFT" prefWidth="75.0" text="Client" textAlignment="LEFT" underline="false" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label alignment="CENTER_LEFT" prefWidth="75.0" text="Total" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label alignment="CENTER_LEFT" prefWidth="75.0" text="Date" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="totalField" disable="false" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="dateField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <ComboBox fx:id="clientField" prefHeight="21.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <ComboBox fx:id="workerField" prefHeight="21.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="57.0" prefWidth="57.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="184.0" />
+      </columnConstraints>
+      <padding>
+        <Insets left="30.0" right="30.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <HBox id="HBox" alignment="CENTER" minWidth="-1.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <children>
+        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="OK" />
+        <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancel" />
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@DarkTheme.css" />
+  </stylesheets>
+</AnchorPane>

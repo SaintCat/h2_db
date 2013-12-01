@@ -1,0 +1,26 @@
+.backgroud {
+ -fx-background-color:  linear-gradient(lightgray, gray);
+ -fx-border-color: white;
+ -fx-padding: 10 10 10 10;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: linear-gradient(gray, black);
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(black, gray);
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: gray;
+  -fx-text-fill: #1d1d1d;
+}

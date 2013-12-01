@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" pickOnBounds="true" prefHeight="450.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.saintcat.h2.RootLayoutViewController">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="61.0" prefWidth="600.0">
+      <children>
+        <ToggleButton id="pill-left" mnemonicParsing="false" onMousePressed="#handle1" prefWidth="84.0" selected="true" text="Owners">
+          <toggleGroup>
+            <ToggleGroup fx:id="btns" />
+          </toggleGroup>
+        </ToggleButton>
+        <ToggleButton id="pill-center" mnemonicParsing="false" onMousePressed="#handle2" prefWidth="84.0" text="Objects" toggleGroup="$btns" />
+        <ToggleButton id="pill-center" mnemonicParsing="false" onMousePressed="#handleObjectTypes" prefWidth="84.0" text="ObjectTypes" toggleGroup="$btns" />
+        <ToggleButton id="pill-center" mnemonicParsing="false" onMousePressed="#handleContracts" prefWidth="84.0" text="Contracts" toggleGroup="$btns" />
+        <ToggleButton id="pill-center" mnemonicParsing="false" onMousePressed="#handleClients" prefWidth="84.0" text="Clients" toggleGroup="$btns" />
+        <ToggleButton id="pill-center" mnemonicParsing="false" onMousePressed="#handleWorkers" prefWidth="84.0" text="Workers" toggleGroup="$btns" />
+        <ToggleButton id="pill-center" mnemonicParsing="false" onMousePressed="#handle3" prefWidth="84.0" text="Disconnect" toggleGroup="$btns" />
+        <ToggleButton id="pill-right" mnemonicParsing="false" onMousePressed="#handle4" prefWidth="84.0" text="Exit" toggleGroup="$btns" />
+      </children>
+    </HBox>
+  </bottom>
+  <stylesheets>
+    <URL value="@PillButton.css" />
+  </stylesheets>
+  <top>
+    <MenuBar prefHeight="24.0" prefWidth="600.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>
